@@ -1,0 +1,52 @@
+@import '../utils/mixins';
+
+.about-us {
+  padding-bottom: 104px;
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+
+    @include onTablet {
+      grid-template-columns: repeat(6, 1fr);
+      column-gap: 24px;
+    }
+
+    @include onDesktop {
+      grid-template-columns: repeat(12, 1fr);
+    }
+  }
+
+  &__title {
+    margin: 0 0 24px;
+    grid-column: 1 / -1;
+
+    @include onTablet {
+      grid-column: 1 / 4;
+      margin: 0;
+    }
+
+    @include onDesktop {
+      grid-column: 1 / 7;
+    }
+  }
+
+  &__text {
+    font-family: 'Space Mono';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0px;
+    text-align: left;
+
+    grid-column: 1 / -1;
+
+    @include onTablet {
+      grid-column: -4 / -1;
+    }
+    @include onDesktop {
+      grid-column: -7 / -1;
+    }
+  }
+}

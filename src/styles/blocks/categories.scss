@@ -1,0 +1,8 @@
+.categories {
+  &__list {
+    margin: 0 0 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+}

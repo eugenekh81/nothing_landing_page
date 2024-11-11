@@ -1,0 +1,47 @@
+@import '../utils/mixins';
+
+.top-actions {
+  padding: 28px 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include onTablet {
+    padding: 36px 0 36px;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 24px;
+
+    @include onTablet {
+      gap: 32px;
+    }
+  }
+
+  &__number {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+
+    display: none;
+
+    padding-right: 8px;
+    position: absolute;
+    width: max-content;
+    right: 100%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    @include onDesktop {
+      display: block;
+
+      opacity: 0;
+
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+  }
+}

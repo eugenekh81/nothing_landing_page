@@ -1,0 +1,13 @@
+@import '../utils/mixins';
+
+.section {
+  padding: 0 0 96px;
+
+  @include onTablet {
+    padding: 0 0 120px;
+  }
+
+  &__title {
+    margin: 0 0 48px;
+  }
+}

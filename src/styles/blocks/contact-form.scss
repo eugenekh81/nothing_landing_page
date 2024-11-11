@@ -1,0 +1,27 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    font-family: "Space Mono";
+    padding: 14px 16px;
+    margin-bottom: 16px;
+    background-color: #F8F8FA;
+    border: 1px solid #F8F8FA;
+    border-radius: 8px;
+
+    &:hover {
+        border: 1px solid #d5d7de;
+    }
+
+    &--input {
+      height: 48px;
+    }
+
+    &--textarea {
+      margin-bottom: 32px;
+      height: 148px;
+      resize: none;
+    }
+  }
+}

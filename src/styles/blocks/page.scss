@@ -1,0 +1,29 @@
+.page {
+  font-family: "Space Mono", monospace;
+  scroll-behavior: smooth;
+
+  &:has(.page__burger-menu:target) {
+    overflow: hidden;
+    background-color: red;
+  }
+
+  &__body {
+    margin: 0;
+  }
+
+  &__separator {
+    margin-bottom: 48px;
+  }
+
+  &__burger-menu {
+    transform: translateX(-100%);
+    opacity: 0;
+
+    &:target {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+}

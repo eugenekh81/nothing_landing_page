@@ -1,0 +1,21 @@
+@import '../utils/mixins';
+
+.recommend {
+  padding-top: 64px;
+
+  @include onTablet {
+    padding-top: 120px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  @for $n from 1 through 3 {
+    &__item:nth-child(#{$n}) {
+      transition-delay: #{($n - 1) * 120 + 'ms'};
+    }
+  }
+}

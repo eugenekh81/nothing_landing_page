@@ -1,13 +1,356 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="page">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miami</title>
+    <title>Nothing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Space+Mono&display=swap"
+      rel="stylesheet">
     <link rel="stylesheet" href="./styles/main.scss">
     <script src="scripts/main.js" defer></script>
   </head>
-  <body>
-    <h1>Landing Page</h1>
+  <body class="page__body">
+
+    <header class="header">
+      <div class="container">
+        <div class="header__content">
+          <div class="top-actions">
+            <a class="logo" href="/">
+              <picture>
+                <source media="(min-width:744px)"
+                  srcset="./img/hero/logo--tablet-1x.png 1x, ./img/hero/logo--tablet-2x.png 2x" </picture>
+                <source media="(max-width:743x)"
+                  srcset="./img/hero/logo--mobile-1x.png 1x, ./img/hero/logo--mobile-2x.png 2x" </picture>
+                <img class="logo__img" src="./img/hero/logo--mobile-1x.png" alt="Logo">
+            </a>
+
+            <div class="top-actions__buttons">
+              <span class="icon icon--phone">
+                <a class="top-actions__number" href="tel:+1234555555">+1 234 555-55-55</a>
+
+              </span>
+              <a href="#menu" class="icon icon--menu"></a>
+            </div>
+          </div>
+
+          <h1 class="header__title">Bring joy back to the everyday</h1>
+        </div>
+      </div>
+    </header>
+
+    <aside class="page__burger-menu burger-menu" id="menu">
+      <div class="container">
+        <div class="burger-menu__top-actions top-actions">
+          <a class="logo" href="/">
+            <picture>
+              <source media="(min-width:744px)"
+                srcset="./img/hero/logo--tablet-1x.png 1x, ./img/hero/logo--tablet-2x.png 2x" </picture>
+              <source media="(max-width:743x)"
+                srcset="./img/hero/logo--mobile-1x.png 1x, ./img/hero/logo--mobile-2x.png 2x" </picture>
+              <img class="logo__img" src="./img/hero/logo--mobile-1x.png" alt="Logo">
+          </a>
+
+          <div class="top-actions__buttons">
+            <a href="#" class="icon icon--cross"></a>
+          </div>
+        </div>
+        <div class="burger-menu__nav">
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#" class="nav__link">Products</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Store</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Login</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Contact us</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="burger-menu__contacts">
+          <a href="tel:+123455555555" class="burger-menu__contacts-item burger-menu__phone">
+            +1 234 555-55-55
+          </a>
+          <a href="#" class="burger-menu__contacts-item burger-menu__order">
+            Call to order
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <section class="section section--pt-64 recommend">
+        <div class="container">
+          <h2 class="section__title title">
+            Recommended
+          </h2>
+
+          <ul class="recommend__list grid">
+            <li class="recommend__item product animated grid__item--desktop--1-4">
+              <div class="product__image-container">
+                <img class="product__image" src="./img/recommended/phone.png" alt="recommended product" />
+              </div>
+              <div class="product__title">
+                Phone (1)
+              </div>
+
+              <p class="product__description">
+                Designed with instinct, to bring joy back to the everyday. Through the Glyph Interface, a perfected OS
+                and
+                exceptional dual camera. All startlingly fast.
+              </p>
+
+              <p class="product__price">
+                $ 499.00
+              </p>
+            </li>
+            <li class="recommend__item product animated grid__item--desktop--5-8">
+              <div class="product__image-container">
+                <img class="product__image" src="./img/recommended/earphone-case.png" alt="recommended product" />
+              </div>
+              <div class="product__title">
+                Ear (2)
+              </div>
+
+              <p class="product__description">
+                Perfecting the path from artist to ear. So that music sounds just as it was intended.
+              </p>
+
+              <p class="product__price">
+                $ 149.00
+              </p>
+            </li>
+            <li class="recommend__item product animated grid__item--desktop--9-12">
+              <div class="product__image-container">
+                <img class="product__image" src="./img/recommended/earphone-stick.png" alt="recommended product" />
+              </div>
+              <div class="product__title">
+                Ear (stick)
+              </div>
+
+              <p class="product__description">
+                Tech you can’t feel. Leaving just space for sound to come to life. Powered by custom sound technology.
+              </p>
+
+              <p class="product__price">
+                $ 119.00
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section categories">
+        <div class="container">
+          <h2 class="section__title title">
+            Browse Nothing products by category
+          </h2>
+
+          <ul class="categories__list">
+            <li class="categories__item grid">
+              <a href="#" class="category grid__item--long">
+                <picture>
+                  <source media="(min-width: 1260px)"
+                    srcset="./img/categories/parrots/desktop--672px-1x.jpg 1x, ./img/categories/parrots/desktop--672px-2x.jpg 2x">
+                  <source media="(min-width: 744px) and (max-width: 1259px)"
+                    srcset="./img/categories/parrots/tablet--392px-1x.jpg 1x, ./img/categories/parrots/tablet--392px-2x.jpg 2x">
+                  <source media="(min-width: 321px) and (max-width: 743px)"
+                    srcset="./img/categories/parrots/mobile--390px-1x.jpg 1x, ./img/categories/parrots/mobile--390px-2x.jpg 2x"
+                    alt="Category">
+                  <source media="(max-width: 320px)"
+                    srcset="./img/categories/parrots/mobile--130px-1x.jpg 1x, ./img/categories/parrots/mobile--130px-2x.jpg 2x"
+                    alt="Category">
+
+                  <img class="category__image"
+                    srcset="./img/categories/parrots/mobile--130px-1x.jpg 1x, ./img/categories/parrots/mobile--130px-2x.jpg 2x"
+                    alt="Category">
+                </picture>
+              </a>
+              <a href="#" class="category grid__item--square">
+                <picture>
+
+                  <source media="(min-width: 1260px)"
+                    srcset="./img/categories/earphone-case/desktop--324px-1x.jpg 1x, ./img/categories/earphone-case/desktop--324px-2x.jpg 2x">
+                  <source media="(min-width: 744px) and (max-width: 1259px)"
+                    srcset="./img/categories/earphone-case/tablet--184px-1x.jpg 1x, ./img/categories/earphone-case/tablet--184px-2x.jpg 2x">
+                  <source media="(max-width: 320px)"
+                    srcset="./img/categories/earphone-case/mobile--130px-1x.jpg 1x, ./img/categories/earphone-case/mobile--130px-2x.jpg 2x"
+                    alt="Category">
+                  <source media="(min-width: 321px) and (max-width: 743px)"
+                    srcset="./img/categories/earphone-case/mobile--390px-1x.jpg 1x, ./img/categories/earphone-case/mobile--390px-2x.jpg 2x"
+                    alt="Category">
+
+
+                  <img class="category__image"
+                    srcset="./img/categories/earphone-case/mobile--130px-1x.jpg 1x, ./img/categories/earphone-case/mobile--130px-2x.jpg 2x"
+                    alt="Category">
+                </picture>
+              </a>
+              <h3 class="category__title">All products</h3>
+            </li>
+            <li class="categories__item grid">
+              <a href="#" class="category grid__item--square">
+                <picture>
+                  <source media="(min-width: 1260px)"
+                    srcset="./img/categories/earphone/desktop--324px-1x.jpg 1x, ./img/categories/earphone/desktop--324px-2x.jpg 2x">
+                  <source media="(min-width: 744px) and (max-width: 1259px)"
+                    srcset="./img/categories/earphone/tablet--184px-1x.jpg 1x, ./img/categories/earphone/tablet--184px-2x.jpg 2x">
+                  <source media="(max-width: 320px)"
+                    srcset="./img/categories/earphone/mobile--130px-1x.jpg 1x, ./img/categories/earphone/mobile--130px-2x.jpg 2x"
+                    alt="Category">
+                  <source media="(min-width: 321px) and (max-width: 743px)"
+                    srcset="./img/categories/earphone/mobile--390px-1x.jpg 1x, ./img/categories/earphone/mobile--390px-2x.jpg 2x"
+                    alt="Category">
+
+
+                  <img class="category__image"
+                    srcset="./img/categories/earphone/mobile--130px-1x.jpg 1x, ./img/categories/earphone/mobile--130px-2x.jpg 2x"
+                    alt="Category">
+                </picture>
+              </a>
+              <a href="#" class="category grid__item--long">
+                <picture>
+                  <source media="(min-width: 1260px)"
+                    srcset="./img/categories/earphone-case-slim/desktop--672px-1x.jpg 1x, ./img/categories/earphone-case-slim/desktop--672px-2x.jpg 2x">
+                  <source media="(min-width: 744px) and (max-width: 1259px)"
+                    srcset="./img/categories/earphone-case-slim/tablet--392px-1x.jpg 1x, ./img/categories/earphone-case-slim/tablet--392px-2x.jpg 2x">
+                  <source media="(min-width: 321px) and (max-width: 743px)"
+                    srcset="./img/categories/earphone-case-slim/mobile--390px-1x.jpg 1x, ./img/categories/earphone-case-slim/mobile--390px-2x.jpg 2x"
+                    alt="Category">
+                  <source media="(max-width: 320px)"
+                    srcset="./img/categories/earphone-case-slim/mobile--130px-1x.jpg 1x, ./img/categories/earphone-case-slim/mobile--130px-2x.jpg 2x"
+                    alt="Category">
+
+                  <img class="category__image"
+                    srcset="./img/categories/earphone-case-slim/mobile--130px-1x.jpg 1x, ./img/categories/earphone-case-slim/mobile--130px-2x.jpg 2x"
+                    alt="Category">
+                </picture>
+              </a>
+              <h3 class="category__title">Audio</h3>
+            </li>
+            <li class="categories__item grid">
+              <a href="#" class="category grid__item--long">
+                <picture>
+                  <source media="(min-width: 1260px)"
+                    srcset="./img/categories/black-phone/desktop--672px-1x.jpg 1x, ./img/categories/black-phone/desktop--672px-2x.jpg 2x">
+                  <source media="(min-width: 744px) and (max-width: 1259px)"
+                    srcset="./img/categories/black-phone/tablet--392px-1x.jpg 1x, ./img/categories/black-phone/tablet--392px-2x.jpg 2x">
+                  <source media="(min-width: 321px) and (max-width: 743px)"
+                    srcset="./img/categories/black-phone/mobile--390px-1x.jpg 1x, ./img/categories/black-phone/mobile--390px-2x.jpg 2x"
+                    alt="Category">
+                  <source media="(max-width: 320px)"
+                    srcset="./img/categories/black-phone/mobile--130px-1x.jpg 1x, ./img/categories/black-phone/mobile--130px-2x.jpg 2x"
+                    alt="Category">
+
+                  <img class="category__image"
+                    srcset="./img/categories/black-phone/mobile--130px-1x.jpg 1x, ./img/categories/black-phone/mobile--130px-2x.jpg 2x"
+                    alt="Category">
+                </picture>
+              </a>
+
+              <a href="#" class="category grid__item--square">
+                <picture>
+                  <source media="(min-width: 1260px)"
+                    srcset="./img/categories/charger/desktop--324px-1x.jpg 1x, ./img/categories/charger/desktop--324px-2x.jpg 2x">
+                  <source media="(min-width: 744px) and (max-width: 1259px)"
+                    srcset="./img/categories/charger/tablet--184px-1x.jpg 1x, ./img/categories/charger/tablet--184px-2x.jpg 2x">
+                  <source media="(max-width: 320px)"
+                    srcset="./img/categories/charger/mobile--130px-1x.jpg 1x, ./img/categories/charger/mobile--130px-2x.jpg 2x"
+                    alt="Category">
+                  <source media="(min-width: 321px) and (max-width: 743px)"
+                    srcset="./img/categories/charger/mobile--390px-1x.jpg 1x, ./img/categories/charger/mobile--390px-2x.jpg 2x"
+                    alt="Category">
+
+
+                  <img class="category__image"
+                    srcset="./img/categories/charger/mobile--130px-1x.jpg 1x, ./img/categories/charger/mobile--130px-2x.jpg 2x"
+                    alt="Category">
+                </picture>
+              </a>
+              <h3 class="category__title">Accessories</h3>
+            </li>
+          </ul>
+
+          <a href="#" class="button button--primary">View all</a>
+        </div>
+      </section>
+
+      <div class="page__separator separator">
+      </div>
+
+      <section class="section about-us">
+        <div class="container">
+          <div class="about-us__content">
+            <h2 class="section__title title about-us__title">
+              About us
+            </h2>
+
+            <p class="about-us__text">
+              We’re a London-based tech company on a mission to remove barriers between people and technology.
+              <br><br>
+              To do this, we’re crafting intuitive, flawlessly connected products that improve our lives without getting
+              in
+              the way.
+              No confusing tech-speak. No silly product names. Just artistry, passion and trust. And products we’re
+              proud
+              to
+              share with our friends and family. Simple.
+              <br><br>
+              Because beautiful tech shouldn’t be complicated.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section contact-us">
+        <div class="container">
+          <h2 class="section__title title contact-us__title">
+            Contact us
+          </h2>
+
+          <form class="contact-us__form contact-form" onsubmit="this.reset(); return false">
+            <input type="text" name="name" id="name" class="contact-form__item contact-form__item--input"
+              placeholder="Name" required>
+            <input type="text" name="email" id="email" class="contact-form__item contact-form__item--input"
+              placeholder="Email" required>
+            <textarea class="contact-form__item contact-form__item--textarea" name="message" placeholder="Message"
+              required></textarea>
+            <button type="submit" class="button button--primary">Send</a>
+          </form>
+
+          <div class="contact-us__contact-info contact-info">
+            <ul class="contact-info__list">
+              <li class="contact-info__item">
+                <h3 class="contact-info__title">Phone</h3>
+                <p class="contact-info__data">+1 234 555-55-55</p>
+              </li>
+              <li class="contact-info__item">
+                <h3 class="contact-info__title">Email</h3>
+                <p class="contact-info__data">hello@nothing.com</p>
+              </li>
+              <li class="contact-info__item">
+                <h3 class="contact-info__title">Address</h3>
+                <p class="contact-info__data">
+                <address class="contact-info__address">
+                  400 first ave.<br>
+                  suite 700<br>
+                  Minneapolis, MN 55401
+                </address>
+                </p>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

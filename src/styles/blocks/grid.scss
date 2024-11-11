@@ -1,0 +1,54 @@
+@import '../utils/mixins';
+
+.grid {
+  --columns: 2;
+  --row-height: 130px;
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  column-gap: 20px;
+  row-gap: 16px;
+  grid-template-rows: minmax(min-content, var(--row-height));
+
+  @include onTablet {
+    --columns: 6;
+    --row-height: 184px;
+    column-gap: 24px;
+  }
+
+  @include onDesktop {
+    --columns: 12;
+    --row-height: 324px;
+  }
+
+  &__item {
+    @for $start from 1 through 12 {
+      @for $end from $start + 1 through 12 {
+        &--desktop--#{$start}-#{$end} {
+          grid-column: #{$start} / #{$end + 1};
+        }
+      }
+    }
+
+    &--square {
+      @include onTablet {
+        grid-column: span 2;
+      }
+
+      @include onDesktop {
+        grid-column: span 4;
+      }
+    }
+
+    &--long {
+      @include onTablet {
+        grid-column: span 4;
+        padding-bottom: 0;
+
+        @include onDesktop {
+          grid-column: span 8;
+        }
+      }
+    }
+    grid-column: span;
+  }
+}

@@ -1,0 +1,33 @@
+@import '../utils/mixins';
+
+.contact-info {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__item {
+  }
+
+  &__title {
+    margin: 0 0 8px;
+    font-family: 'Space Grotesk';
+    font-size: 14px;
+    color: #9393a3;
+    font-weight: 400;
+  }
+
+  &__data {
+    font-family: 'Space Mono';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+
+  &__address {
+    font-style: normal;
+  }
+}
